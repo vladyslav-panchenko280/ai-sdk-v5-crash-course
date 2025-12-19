@@ -71,13 +71,13 @@ Once all these steps are complete, you'll be able to have a full conversation wi
 
 ## Steps To Complete
 
-- [ ] Import the `useChat` hook from `@ai-sdk/react` in `client/root.tsx`
+- [ x ] Import the `useChat` hook from `@ai-sdk/react` in `client/root.tsx`
 
-- [ ] Replace the `TODO` in the App component with the appropriate `useChat({})` call
+- [ x ] Replace the `TODO` in the App component with the appropriate `useChat({})` call
 
-- [ ] Complete the `onSubmit` handler in `ChatInput` to use `sendMessage` with the input text
+- [ x ] Complete the `onSubmit` handler in `ChatInput` to use `sendMessage` with the input text
 
-- [ ] In `api/chat.ts`, extract the `UIMessage`s from the request body (replace the first `TODO`)
+- [ x ] In `api/chat.ts`, extract the `UIMessage`s from the request body (replace the first `TODO`)
 
 - [ ] Import and use a function to convert `UIMessage`s to `ModelMessage`s (replace the second `TODO`)
 

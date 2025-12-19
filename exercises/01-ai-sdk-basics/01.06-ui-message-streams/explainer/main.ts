@@ -1,7 +1,7 @@
-import { google } from '@ai-sdk/google';
+import { anthropic } from '@ai-sdk/anthropic';
 import { streamText } from 'ai';
 
-const model = google('gemini-2.5-flash');
+const model = anthropic('claude-3-5-haiku-20241022');
 
 const stream = streamText({
   model,

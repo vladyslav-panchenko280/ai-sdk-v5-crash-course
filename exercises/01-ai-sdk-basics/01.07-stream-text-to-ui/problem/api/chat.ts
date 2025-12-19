@@ -1,27 +1,28 @@
-import { google } from '@ai-sdk/google';
+import { anthropic } from '@ai-sdk/anthropic';
+
 import {
+  convertToModelMessages,
   createUIMessageStreamResponse,
   streamText,
   type ModelMessage,
   type UIMessage,
 } from 'ai';
 
+const model = anthropic('claude-3-5-haiku-20241022');
+
 export const POST = async (req: Request): Promise<Response> => {
   const body = await req.json();
 
-  // TODO: get the UIMessage[] from the body
-  const messages: UIMessage[] = TODO;
+  const modelMessages: ModelMessage[] = convertToModelMessages(
+    body.messages satisfies UIMessage[],
+  );
 
-  // TODO: convert the UIMessage[] to ModelMessage[]
-  const modelMessages: ModelMessage[] = TODO;
-
-  // TODO: pass the modelMessages to streamText
   const streamTextResult = streamText({
-    model: google('gemini-2.5-flash'),
+    model,
+    messages: modelMessages,
   });
 
-  // TODO: create a UIMessageStream from the streamTextResult
-  const stream = TODO;
+  const stream = streamTextResult.toUIMessageStream();
 
   return createUIMessageStreamResponse({
     stream,
