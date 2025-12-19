@@ -67,17 +67,17 @@ The final result should be an array of facts about the imaginary planet describe
 
 ## Steps To Complete
 
-- [ ] Call the `streamObject` function and store the result in `factsResult`
+- [ x ] Call the `streamObject` function and store the result in `factsResult`
   - Import `streamObject` from 'ai' if not already imported
 
-- [ ] Pass the `model` parameter to `streamObject` (same as used with `streamText`)
+- [ x ] Pass the `model` parameter to `streamObject` (same as used with `streamText`)
 
-- [ ] Create a prompt that asks for facts about the imaginary planet
+- [ x ] Create a prompt that asks for facts about the imaginary planet
   - Include the `finalText` in your prompt so the LLM knows what story to reference
 
-- [ ] Define a Zod schema for an object with a `facts` property that is an array of strings
+- [ x ] Define a Zod schema for an object with a `facts` property that is an array of strings
   - Import `z` from 'zod' if not already imported
   - Use the `z.array` and `z.string` functions to define the schema
   - Use the `z.describe` function to describe the schema, if you like
 
-- [ ] Run the exercise with `pnpm run dev` to see both the streaming text and the structured object being built
+- [ x ] Run the exercise with `pnpm run dev` to see both the streaming text and the structured object being built

@@ -93,11 +93,11 @@ Good luck, and I'll see you in the solution.
 
 ## Steps To Complete
 
-- [ ] Modify the `sendMessage` call to include both text and file data
+- [ x ] Modify the `sendMessage` call to include both text and file data
   - You'll need to use the `parts` array to send both types of data. Use autocompletion to find the right type.
   - Convert the file to a data URL using the provided `fileToDataURL` function
 
-- [ ] Test your implementation by uploading an image
+- [ x ] Test your implementation by uploading an image
   - Run the exercise with `pnpm run exercise`
   - Upload an image using the file upload button
   - Ask a question about the image (e.g., "Can you describe this image?")
