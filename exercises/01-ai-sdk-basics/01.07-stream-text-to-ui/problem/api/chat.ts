@@ -7,6 +7,7 @@ import {
   type ModelMessage,
   type UIMessage,
 } from 'ai';
+ import util from 'util';
 
 const model = anthropic('claude-3-5-haiku-20241022');
 
@@ -17,6 +18,14 @@ export const POST = async (req: Request): Promise<Response> => {
     body.messages satisfies UIMessage[],
   );
 
+console.log(util.inspect(body.messages, { 
+  depth: null, 
+  colors: true 
+}));
+console.log(util.inspect(modelMessages, { 
+  depth: null, 
+  colors: true 
+}));
   const streamTextResult = streamText({
     model,
     messages: modelMessages,
