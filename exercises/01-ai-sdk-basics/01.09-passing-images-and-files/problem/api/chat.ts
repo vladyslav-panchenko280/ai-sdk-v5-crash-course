@@ -1,4 +1,4 @@
-import { google } from '@ai-sdk/google';
+import { anthropic } from '@ai-sdk/anthropic';
 import {
   convertToModelMessages,
   createUIMessageStreamResponse,
@@ -7,16 +7,16 @@ import {
   type UIMessage,
 } from 'ai';
 
+const model = anthropic('claude-3-5-haiku-20241022');
+
 export const POST = async (req: Request): Promise<Response> => {
   const body = await req.json();
 
-  const messages: UIMessage[] = body.messages;
-
   const modelMessages: ModelMessage[] =
-    convertToModelMessages(messages);
+    convertToModelMessages(body.messages satisfies UIMessage[]);
 
   const streamTextResult = streamText({
-    model: google('gemini-2.5-flash'),
+    model,
     messages: modelMessages,
   });
 
