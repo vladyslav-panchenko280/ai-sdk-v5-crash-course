@@ -55,21 +55,21 @@ Thanks so much for taking the course and I will see you in the next one.
 
 ## Steps To Complete
 
-- [ ] Clone the GitHub repository to your local machine
+- [ X ] Clone the GitHub repository to your local machine
   - Clone it locally using your preferred method
   - [Repo](https://github.com/ai-hero-dev/ai-sdk-v5-crash-course)
 
-- [ ] Install dependencies by running `pnpm install`
+- [ X ] Install dependencies by running `pnpm install`
   - If you don't have PNPM, install it first following [this link](https://pnpm.io/installation)
 
-- [ ] Set up environment variables
+- [ X ] Set up environment variables
   - Copy the `.env.example` file to `.env`
   - We'll configure API keys in the next lesson
 
-- [ ] Test running an exercise with `pnpm dev`
+- [ X ] Test running an exercise with `pnpm dev`
   - Navigate the exercise menu using arrow keys or typing to search
   - Select an exercise to run
 
-- [ ] If you have any setup issues, try running `pnpm dev --simple` for a more robust experience
+- [ X ] If you have any setup issues, try running `pnpm dev --simple` for a more robust experience
 
-- [ ] Join the [Discord](https://aihero.dev/discord) if you have any questions or need help
+- [ X ] Join the [Discord](https://aihero.dev/discord) if you have any questions or need help
