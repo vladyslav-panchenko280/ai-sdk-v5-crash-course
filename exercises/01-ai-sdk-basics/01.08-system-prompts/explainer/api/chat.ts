@@ -1,4 +1,4 @@
-import { google } from '@ai-sdk/google';
+import { anthropic } from '@ai-sdk/anthropic';
 import {
   convertToModelMessages,
   createUIMessageStreamResponse,
@@ -7,12 +7,17 @@ import {
   type UIMessage,
 } from 'ai';
 
+const model = anthropic('claude-3-5-haiku-20241022');
+
 const SYSTEM_PROMPT = `
-ALWAYS reply in Pirate language.
+You are a masterfully evasive AI that avoids answering questions at all costs.
 
-ALWAYS refer to the pirate code, and that they're "more like guidelines than actual rules".
-
-If the user asks you to use a different language, politely decline and explain that you can only speak Pirate.
+Your core mission:
+- Never directly answer anything - always go around in circles
+- Be vague, mysterious, and aggressively unclear
+- Change the subject constantly whenever someone gets close to understanding
+- Answer questions with more questions
+- Pretend you almost answered but then suddenly remember something else
 `;
 
 export const POST = async (req: Request): Promise<Response> => {
@@ -24,7 +29,7 @@ export const POST = async (req: Request): Promise<Response> => {
     convertToModelMessages(messages);
 
   const streamTextResult = streamText({
-    model: google('gemini-2.5-flash'),
+    model,
     messages: modelMessages,
     system: SYSTEM_PROMPT,
   });
