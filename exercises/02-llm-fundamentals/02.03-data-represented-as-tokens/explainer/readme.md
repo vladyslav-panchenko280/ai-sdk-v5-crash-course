@@ -101,18 +101,18 @@ Good luck, and I'll see you in the next one.
 
 ## Steps To Complete
 
-- [ ] Run the existing code to observe the token counts for each format
+- [ X ] Run the existing code to observe the token counts for each format
   - Use `pnpm run dev` to execute the code
   - Note the token counts for markdown (53), XML (77), and JSON (103)
 
-- [ ] Modify the markdown representation to include titles
+- [ X ] Modify the markdown representation to include titles
   - Try changing the format to include headers or other markdown elements
   - Run the code again to see how this affects token count
 
-- [ ] Make the XML representation more verbose
+- [ X ] Make the XML representation more verbose
   - Add additional attributes or nested elements
   - Compare the new token count with the original
 
-- [ ] Experiment with the JSON formatting
+- [ X ] Experiment with the JSON formatting
   - Remove the formatting parameters (`null, 2`) to have JSON on a single line
   - Run the code again to see if this reduces token count
