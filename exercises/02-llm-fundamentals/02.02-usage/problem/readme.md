@@ -37,15 +37,15 @@ Good luck, and I'll see you in the solution.
 
 ## Steps To Complete
 
-- [ ] Access the usage property from the output object
+- [ X ] Access the usage property from the output object
   - This will contain information about token consumption
 
-- [ ] Make sure to properly await the usage if it's a promise
+- [ X ] Make sure to properly await the usage if it's a promise
   - Remember that many properties returned from `streamText` are wrapped in promises
 
-- [ ] Print the usage information to the console
+- [ X ] Print the usage information to the console
   - Use `console.log()` to display the full usage object
 
-- [ ] Run the code with `pnpm run dev` to see the output
+- [ X ] Run the code with `pnpm run dev` to see the output
   - Examine the properties on the usage object
   - Try to understand what each property represents
