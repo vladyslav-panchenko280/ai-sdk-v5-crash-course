@@ -40,6 +40,14 @@ const asMarkdown = DATA.map(
   (item) => `- [${item.title}](${item.url})`,
 ).join('\n');
 
+// TOON format - Token-Oriented Object Notation
+// Tabular format: [count]{fields}:\nvalues
+const asTOON = `[${DATA.length}]{url,title}:
+${DATA.map((item) => `${item.url},${item.title}`).join('\n')}`;
+
+console.log('TOON tokens:', tokenize(asTOON).length);
+console.log(asTOON);
+console.log('--------------------------------');
 console.log('Markdown tokens:', tokenize(asMarkdown).length);
 console.log(asMarkdown);
 console.log('--------------------------------');
