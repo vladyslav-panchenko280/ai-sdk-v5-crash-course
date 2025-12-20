@@ -47,6 +47,6 @@ Now the way tokens work is you're often billed by the token and so tokens, not w
 
 ## Steps To Complete
 
-- [ ] Open the [`main.ts`](./main.ts) file and review the existing implementation of the [`tokenize`](./main.ts) function.
+- [ X ] Open the [`main.ts`](./main.ts) file and review the existing implementation of the [`tokenize`](./main.ts) function.
 
-- [ ] Try changing the input text in [`input.md`](./input.md) and see how many tokens it spits out.
+- [ X ] Try changing the input text in [`input.md`](./input.md) and see how many tokens it spits out.
