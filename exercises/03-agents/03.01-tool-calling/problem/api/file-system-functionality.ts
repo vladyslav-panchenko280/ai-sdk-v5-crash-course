@@ -366,12 +366,6 @@ export function searchFiles(
   }
 }
 
-const toolConfigs = [
-  {
-    
-  }
-]
-
 // Export all functions as a single object for easy tool registration
 export const fileSystemTools = {
   writeFile,
@@ -382,7 +376,3 @@ export const fileSystemTools = {
   exists,
   searchFiles,
 };
-
-export function createTool() {
-
-}
