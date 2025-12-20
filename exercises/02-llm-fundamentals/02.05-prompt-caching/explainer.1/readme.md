@@ -96,19 +96,19 @@ Some model providers explicitly ask you to tell them how long to cache it for, a
 
 ## Steps to Complete
 
-- [ ] [Run the playground](./main.ts) with the initial settings to observe the basic caching behavior
+- [ X ] [Run the playground](./main.ts) with the initial settings to observe the basic caching behavior
   - Look for the green (cached) and red (uncached) text in the output
 
-- [ ] Modify the `tokensInCache` variable to experiment with different cache contents
+- [ X ] Modify the `tokensInCache` variable to experiment with different cache contents
   - Try simple sentences, conversation formats, or completely different text
 
-- [ ] Change the `inputTokens` variable to test different scenarios
+- [ X ] Change the `inputTokens` variable to test different scenarios
   - Try matching the cache exactly
   - Try partial matches with the cache
   - Try completely different text from what's in the cache
 
-- [ ] Test the [conversation scenario](../explainer.2/main.ts) by setting up both variables as conversation formats
+- [ X ] Test the [conversation scenario](../explainer.2/main.ts) by setting up both variables as conversation formats
   - See how adding new messages affects caching
 
-- [ ] Experiment with changing just a single word or character in the input to see how it affects caching
+- [ X ] Experiment with changing just a single word or character in the input to see how it affects caching
   - Observe how early changes invalidate more of the cache than later changes
