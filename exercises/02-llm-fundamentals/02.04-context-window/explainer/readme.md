@@ -65,12 +65,12 @@ Good luck, and I will see you in the next one.
 
 ## Steps To Complete
 
-- [ ] Examine the code to understand how we're creating a very large text to test context window limits
+- [ X ] Examine the code to understand how we're creating a very large text to test context window limits
 
-- [ ] Run the code using `pnpm run dev` to see what happens when the context window is exceeded
+- [ X ] Run the code using `pnpm run dev` to see what happens when the context window is exceeded
   - Observe the error message that appears in the terminal
 
-- [ ] Try using a different model by changing the `model` parameter in the `generateText` call
+- [ X ] Try using a different model by changing the `model` parameter in the `generateText` call
   - Different models have different context window sizes
 
-- [ ] Notice how different model providers return different types of errors for context window overflows
+- [ X ] Notice how different model providers return different types of errors for context window overflows
