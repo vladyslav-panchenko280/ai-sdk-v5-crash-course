@@ -1,14 +1,14 @@
-import { google } from '@ai-sdk/google';
 import { stepCountIs, streamText, tool } from 'ai';
 import { z } from 'zod';
 import * as fsTools from './file-system-functionality.ts';
+import { anthropic } from '@ai-sdk/anthropic';
 
 const PROMPT = `
   Write me a poem about a pirate in pirate.md
 `;
 
 const result = streamText({
-  model: google('gemini-2.5-flash'),
+  model: anthropic('claude-3-5-haiku-20241022'),
   system: `
     You are a helpful assistant that can use a sandboxed file system to create, edit and delete files.
 
