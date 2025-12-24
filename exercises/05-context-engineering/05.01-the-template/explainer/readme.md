@@ -154,10 +154,10 @@ The key advantage of this template is that it provides a section for virtually e
 
 ## Steps To Complete
 
-- [ ] Read through the prompt template thoroughly to understand each section and its purpose
+- [ X ] Read through the prompt template thoroughly to understand each section and its purpose
 
-- [ ] Pay special attention to the order of sections (beginning: high-level context, middle: background data, end: critical instructions)
+- [ X ] Pay special attention to the order of sections (beginning: high-level context, middle: background data, end: critical instructions)
 
-- [ ] Consider how you might adapt this template for your own AI applications
+- [ X ] Consider how you might adapt this template for your own AI applications
 
-- [ ] Think about what kinds of information would go in each section for your specific use cases
+- [ X ] Think about what kinds of information would go in each section for your specific use cases
