@@ -59,16 +59,16 @@ What I suggest you do is try exploring with the types inside the `UIMessage`. Tr
 
 ## Steps To Complete
 
-- [ ] Open our [`main.ts`](./main.ts) file to explore the code
+- [ X ] Open our [`main.ts`](./main.ts) file to explore the code
 
-- [ ] Try modifying the `UIMessage` parts array to include different types of content
+- [ X ] Try modifying the `UIMessage` parts array to include different types of content
 
-- [ ] For example, add an image URL, a tool call, or other content types
+- [ X ] For example, add an image URL, a tool call, or other content types
 
-- [ ] Run the code to see how `convertToModelMessages` transforms your modified UI messages into model messages
+- [ X ] Run the code to see how `convertToModelMessages` transforms your modified UI messages into model messages
 
-- [ ] Experiment with different combinations of content types in the parts array
+- [ X ] Experiment with different combinations of content types in the parts array
 
-- [ ] Observe the output in the terminal to understand how the transformation works
+- [ X ] Observe the output in the terminal to understand how the transformation works
 
-- [ ] Try to predict what the transformation will look like before running the code
+- [ X ] Try to predict what the transformation will look like before running the code
