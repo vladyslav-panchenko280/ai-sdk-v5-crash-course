@@ -79,12 +79,12 @@ Good luck, and I'll see you in the solution.
 
 ## Steps To Complete
 
-- [ ] Implement the first `writeSlackResult` function to generate the initial Slack message draft using the Google Gemini model with the provided system prompt. You'll need to use [`generateText`](/exercises/01-ai-sdk-basics/01.03-generating-text/problem/readme.md) here.
+- [ X ] Implement the first `writeSlackResult` function to generate the initial Slack message draft using the Google Gemini model with the provided system prompt. You'll need to use [`generateText`](/exercises/01-ai-sdk-basics/01.03-generating-text/problem/readme.md) here.
 
-- [ ] Implement the `evaluateSlackResult` function to evaluate the first draft using another LLM call with the evaluation system prompt - again, with [`generateText`](/exercises/01-ai-sdk-basics/01.03-generating-text/problem/readme.md).
+- [ X ] Implement the `evaluateSlackResult` function to evaluate the first draft using another LLM call with the evaluation system prompt - again, with [`generateText`](/exercises/01-ai-sdk-basics/01.03-generating-text/problem/readme.md).
 
-- [ ] Implement the `finalSlackAttempt` function to stream the final Slack message based on the conversation, first draft, and feedback. You'll need to use [`streamText`](/exercises/01-ai-sdk-basics/01.04-stream-text-to-terminal/problem/readme.md) here and then [`.toUIMessageStreamResponse()`](/exercises/01-ai-sdk-basics/01.06-stream-text-to-ui/problem/readme.md) to pass the final response.
+- [ X ] Implement the `finalSlackAttempt` function to stream the final Slack message based on the conversation, first draft, and feedback. You'll need to use [`streamText`](/exercises/01-ai-sdk-basics/01.04-stream-text-to-terminal/problem/readme.md) here and then [`.toUIMessageStreamResponse()`](/exercises/01-ai-sdk-basics/01.06-stream-text-to-ui/problem/readme.md) to pass the final response.
 
-- [ ] Test your implementation by running the local dev server and submitting the pre-filled prompt in the UI. While you won't see the initial draft or evaluation, you should see the final result.
+- [ X ] Test your implementation by running the local dev server and submitting the pre-filled prompt in the UI. While you won't see the initial draft or evaluation, you should see the final result.
 
-- [ ] Observe whether the three-step process produces a better result than a single LLM call would, checking the final streamed response in the UI.
+- [ X ] Observe whether the three-step process produces a better result than a single LLM call would, checking the final streamed response in the UI.

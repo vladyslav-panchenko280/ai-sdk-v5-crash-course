@@ -1,3 +1,4 @@
+import { anthropic } from '@ai-sdk/anthropic';
 import { google } from '@ai-sdk/google';
 import { generateText, streamText, type UIMessage } from 'ai';
 
@@ -33,11 +34,41 @@ export const POST = async (req: Request): Promise<Response> => {
   const body: { messages: UIMessage[] } = await req.json();
   const { messages } = body;
 
-  const writeSlackResult = TODO; // Write Slack message
+  const writeSlackResult = await generateText({
+    model: anthropic('claude-3-5-haiku-20241022'),
+    system: WRITE_SLACK_MESSAGE_FIRST_DRAFT_SYSTEM,
+    prompt: `
+    Conversation history: 
+    ${formatMessageHistory(messages)}
+  `,
+  });
 
-  const evaluateSlackResult = TODO; // Evaluate Slack message
+  const evaluateSlackResult = await generateText({
+    model: anthropic('claude-3-5-haiku-20241022'),
+    system: EVALUATE_SLACK_MESSAGE_SYSTEM,
+    prompt: `
+      Conversation history:
+      ${formatMessageHistory(messages)}
 
-  const finalSlackAttempt = TODO; // Write final Slack message
+      First draft:
+      ${writeSlackResult.text}
+    `,
+  });
+
+  const finalSlackAttempt = streamText({
+    model: anthropic('claude-3-5-haiku-20241022'),
+    system: WRITE_SLACK_MESSAGE_FINAL_SYSTEM,
+    prompt: `
+       Conversation history:
+       ${formatMessageHistory(messages)}
+ 
+       First draft:
+       ${writeSlackResult.text}
+ 
+       Previous feedback:
+       ${evaluateSlackResult.text}
+     `,
+  });
 
   return finalSlackAttempt.toUIMessageStreamResponse();
 };
